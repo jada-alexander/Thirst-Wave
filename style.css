@@ -1,0 +1,214 @@
+html, body {
+  margin:0;
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+  width:100px;
+}
+
+header {
+    background-color: #44a2c5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(white);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+}
+
+#sign-up {
+    border-radius: 30px;
+    padding: 10px;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    border: 1px solid white;
+}
+
+#sign-up:hover {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.9);
+}
+
+nav a:hover:not(#sign-up) {
+    background-size: 100% 0.1em;
+}
+
+section {
+    text-align: center;
+}
+
+.hero {
+    min-height: 65vh;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero-text {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#enter {
+    cursor: pointer;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: navy;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    margin: auto;
+}
+
+#enter:hover {
+    box-shadow: 10px 10px rgba(173, 216, 230, 0.5);
+    transition: box-shadow 0.1s, ease-in-out 0.7s;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-top: auto;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+  display: block;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.card {
+    background-color: darkslateblue;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;;
+    padding: 50px;
+    border-radius: 25px;
+    gap: 25px;
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.title {
+    line-height: 30px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #44a2c5;
+    padding: 5px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
